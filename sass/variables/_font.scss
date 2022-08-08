@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://fonts.google.com/specimen/Montserrat');
+}
+
+@font-face {
+    font-family: 'Fraunces';
+    src: url('https://fonts.google.com/specimen/Fraunces');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&display=swap'); 
+
+
+$Monserrat: 'Monserrat';
+
+$font-primary: 'Fraunces';
+$fall-back: sans-serif;

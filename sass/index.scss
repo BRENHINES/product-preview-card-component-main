@@ -1,0 +1,135 @@
+@import './variables/variables',
+        './functions/functions',
+        './mixins/media-queries',
+        './resets/resets';
+
+
+
+    .container{
+
+         width: 100%;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+
+         @include mobile{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            height: 75vh;
+        }
+
+         @include tablette{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+         }
+
+         .card{
+
+            width: 90%;
+            margin: auto;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: $white;
+            // margin-bottom: 25px;
+
+            @include tablette{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 90%;
+                margin: auto;
+            }
+
+            .image{
+        
+                width: 100%;
+                height: 450px;
+
+                .container__image{
+                    width: 100%;
+                    height: 100%;
+                    background-position: center;
+                    background-size: cover;
+                    background-image: url('../images/image-product-mobile.jpg');
+    
+                    @include tablette{
+                        background-image: url('../images/image-product-desktop.jpg');
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+
+            .container__description{
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 15px;
+
+                
+                @include tablette{
+                    padding: 40px 40px;
+                }
+
+                .perfume {
+                    font-family: $Monserrat,$fall-back;
+                    letter-spacing: .45rem;
+                    color: $dark-grayish-blue;
+                    font-weight: weigth(high);
+                    font-size: $paragraph;
+                    // padding-top: 15px;
+                }
+
+                .Prices{
+
+                    display: flex;
+                    align-items: center;
+                    padding-bottom: 30px;
+
+                    .price {
+                        font-family: $font-primary, $fall-back;
+                        font-size: 30px;
+                        color: $dark-cyan;
+                        margin-right: 5px;
+                        padding-right: 10px;
+                        font-weight: weight(high);
+                    }
+                    
+                    .price__bare{
+                        text-decoration: line-through;
+                        color: $dark-grayish-blue;
+                        font-size: weight(medium);
+                    }
+                }
+
+                button{
+                    background: $dark-cyan;
+                    border: none;
+                    width: 100%;
+                    padding-block: 15px;
+                    text-align: center;
+                    border-radius: 7px;
+                    margin: auto;
+                    display: inline-block;
+                    font-family: $Monserrat, $fall-back;
+                    font-size: 16px;
+                    color: $white;
+                    font-weight: weight(medium);
+                    margin-bottom: 15px;
+                    padding-bottom: 15px;
+
+                    img{
+                        width: 15px;
+                        height: 15px;
+                        margin-right: 10px;
+                    }
+
+                }
+
+            }
+        }
+    }

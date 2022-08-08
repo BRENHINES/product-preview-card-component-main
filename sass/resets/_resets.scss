@@ -1,0 +1,46 @@
+@import '../functions/font-weight',
+        '../variables/font-size';
+@import '../variables/font';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: $cream;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100%;
+    position: relative;
+    height: 100vh;
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    font-family: $font-primary,$fall-back;
+    font-weight: weight(high);
+    font-size: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+p {
+    font-size: $paragraph;
+    color: $dark-grayish-blue;
+    font-weight: weight(high);
+    font-family: $Monserrat, $fall-back;
+    line-height: 28px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto; 
+}
